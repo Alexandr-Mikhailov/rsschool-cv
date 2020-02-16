@@ -1,0 +1,27 @@
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    background-color: beige;
+    border : 1px solid black;
+    border-radius: 5px;
+
+
+}
+
+.photo {
+    width: 300px;
+    min-height: 260px;
+    border-radius: 5px;
+}
+
+.code {
+    font-family: monospace;
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0.05);
+    text-align: left;
+    border : 1px solid white;
+    border-radius: 5px;
+}
