@@ -7,8 +7,6 @@
     background-color: beige;
     border : 1px solid black;
     border-radius: 5px;
-
-
 }
 
 .photo {
@@ -24,4 +22,27 @@
     text-align: left;
     border : 1px solid white;
     border-radius: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rss {
+    display: block;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    width: 86px;
+    height: 32px;
+    background-image: url("https://rs.school/images/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+.git-link, .rss-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }

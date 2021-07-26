@@ -6,13 +6,15 @@
     <link href="index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="wrapper">
-      <h1>Resume</h1>
+    <main class="wrapper">
+      <header>
+        <h1>Resume</h1>
+      </header>
       <img class="photo" src="photo.jpg" alt="Photo">
       <div class="main-info">
         <p><strong>First name: </strong>Alexander</p>
         <p><strong>Last Name: </strong>Mikhailov</p>
-        <p><strong>Age: </strong>34</p>
+        <p><strong>Age: </strong>36</p>
       </div>
 
       <div>
@@ -20,12 +22,12 @@
         <p><strong>E-mail: </strong>mikhailov_as@mail.ru</p>
       </div>
 
-      <div>
+      <article>
         <h2>Summary</h2>
         <p>Programming is an interesting and exciting job,so I decided to change my profession.</p>
-      </div>
+      </article>
 
-      <div>
+      <article>
         <h2>Skills</h2>
         <p><strong>Programming languages</strong></p>
         <ul>
@@ -35,11 +37,11 @@
           <li>CSS</li>
           <li>ASM for PIC microcontollers</li>
         </ul>
-      </div>
+      </article>
 
-      <div>
+      <section>
         <h2>Code examples</h2>
-        <pre class='code'>
+        <pre class="code">
 mathCalculator
 document.getElementById('calculateButton').onclick = function () {
     var str = document.getElementById('input').value;
@@ -52,7 +54,7 @@ document.getElementById('calculateButton').onclick = function () {
         var expressionParse = str.match(/(\d+(\.*\d)*)|(\+|\-|\*|\/)/g);
     var i, result = 0;
 
-    for (i = 0; i < expressionParse.length; i++){
+    for (i = 0; i &lt; expressionParse.length; i++){
         switch (expressionParse[i]){
             case '+': {
                 result += parseFloat(expressionParse[i+1]);
@@ -85,12 +87,12 @@ document.getElementById('calculateButton').onclick = function () {
     }
 }
         </pre>
-      </div>
+      </section>
 
       <div>
         <h2>Experience</h2>
 
-        <p>For a last 13 years I worked in testing and development of electronic devices.</p>
+        <p>For a last 14 years I worked in testing and development of electronic devices.</p>
       </div>
       <div>
         <h2>Education</h2>
@@ -109,6 +111,12 @@ document.getElementById('calculateButton').onclick = function () {
         <h2>English</h2>
         <p>I read english technical documetation, watch english youtube channels.</p>
       </div>
-    </div>
+      <footer class='footer'>
+        <a class="git-link" href="https://github.com/Alexandr-Mikhailov">My github</a>
+        <p class="year">2021</p>
+        <div class="rss"></div>
+        <a class="rss-link" href="https://rs.school/js/">Rolling Scopes School course</a>
+      </footer>
+    </main>
   </body>
 </html>
