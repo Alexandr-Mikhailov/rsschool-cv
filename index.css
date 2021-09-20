@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(235, 235, 220);
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    background-color: beige;
+    border : 1px solid black;
+    border-radius: 5px;
+}
+
+img {
+    width: 100%;
+}
+
+.photo {
+    max-width: 300px;
+    max-height: 260px;
+    border-radius: 5px;
+}
+
+.code {
+    font-family: monospace;
+    padding: 10px;
+    background-color: rgb(0, 0, 0, 0.05);
+    text-align: left;
+    border : 1px solid white;
+    border-radius: 5px;
+}
+
+.calc {
+    display: block;
+    height: 594px;
+    background-image: url("calc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rss {
+    display: block;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    width: 86px;
+    height: 32px;
+    background-image: url("https://rs.school/images/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+.git-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}

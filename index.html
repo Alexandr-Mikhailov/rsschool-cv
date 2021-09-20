@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML, CSS & Git Basics</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <main class="wrapper">
+      <header>
+        <h1>Resume</h1>
+      </header>
+      <img class="photo" src="photo.jpg" alt="Photo">
+      <div class="main-info">
+        <p><strong>First name: </strong>Alexander</p>
+        <p><strong>Last Name: </strong>Mikhailov</p>
+        <p><strong>Age: </strong>36</p>
+      </div>
+
+      <div>
+        <h2> Contact info</h2>
+        <ul>
+          <li><strong>E-mail: </strong>mikhailov_as@mail.ru</li>
+        </ul>
+      </div>
+
+      <article>
+        <h2>Summary</h2>
+        <p>Programming is an interesting and exciting job,so I decided to change my profession.</p>
+      </article>
+
+      <article>
+        <h2>Skills</h2>
+        <p><strong>Programming languages</strong></p>
+        <ul>
+          <li>C#</li>
+          <li>JS</li>
+          <li>SQL</li>
+          <li>CSS</li>
+          <li>ASM for PIC microcontollers</li>
+        </ul>
+      </article>
+
+      <section>
+        <h2>Code examples</h2>
+        <pre class="code">
+Recursion 101 from Codewars
+
+function solve(a,b){
+  if (a == 0 || b == 0) {
+    return [a, b];
+  } else if (a >= 2*b) {
+    a = a - 2*b;
+    return solve(a,b)
+  } else if (b >= 2*a) {
+    b = b - 2*a;
+    return solve(a, b);
+  } else return [a, b];
+}
+        </pre>
+        <a class="calc" href="https://rolling-scopes-school.github.io/alexandr-mikhailov-JS2020Q3/calculator/" target="_blank"></a>
+        <p>Simple calculator on pure JS</p>
+      </section>
+
+      <div>
+        <h2>Experience</h2>
+
+        <p>For a last 14 years I worked in testing and development of electronic devices.</p>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <p><strong>Main:</strong></p>
+        <ul>
+          <li>Saratov State University, radio engineering and electrodynamics</li>
+        </ul>
+
+        <p><strong>Online:</strong></p>
+        <ul>
+          <li>EPAM BASICS .NET/WEB DEVELOPMENT in 2018</li>
+          <li>Codeacademy</li>
+        </ul>
+      </div>
+      <div>
+        <h2>English</h2>
+        <p>My current level is A2. I read english technical documetation, watch english youtube channels.</p>
+      </div>
+      <footer class='footer'>
+        <a class="git-link" href="https://github.com/Alexandr-Mikhailov">My github</a>
+        <p class="year">2021</p>
+        <a class="rss" href="https://rs.school/js/"></a>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
