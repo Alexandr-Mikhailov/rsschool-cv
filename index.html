@@ -43,29 +43,65 @@
 
       <section>
         <h2>Code examples</h2>
-        <pre class="code">
-Recursion 101 from Codewars
+        <ol>
+          <li>
+            <pre class="code">
+mathCalculator
+document.getElementById('calculateButton').onclick = function () {
+    var str = document.getElementById('input').value;
+    var isStrExpression = str.match(/^((\d?\.?\d?\s?\+?\-?\*?\/?)+={1})$/g);
 
-function solve(a,b){
-  if (a == 0 || b == 0) {
-    return [a, b];
-  } else if (a >= 2*b) {
-    a = a - 2*b;
-    return solve(a,b)
-  } else if (b >= 2*a) {
-    b = b - 2*a;
-    return solve(a, b);
-  } else return [a, b];
+    if (isStrExpression == null || isStrExpression.length !=1) {
+        alert("cannot parse arithmetic expression")
+    }
+    else{
+        var expressionParse = str.match(/(\d+(\.*\d)*)|(\+|\-|\*|\/)/g);
+    var i, result = 0;
+
+    for (i = 0; i &lt; expressionParse.length; i++){
+        switch (expressionParse[i]){
+            case '+': {
+                result += parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            case '-': {
+                result -= parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            case '*': {
+                result *= parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            case '/': {
+                result /= parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            default : {
+                result = parseFloat(expressionParse[i]);
+                break;
+            }
+        }
+    }
+
+    alert(result.toFixed(2));
+    }
 }
-        </pre>
-        <a class="calc" href="https://rolling-scopes-school.github.io/alexandr-mikhailov-JS2020Q3/calculator/" target="_blank"></a>
-        <p>Simple calculator on pure JS</p>
+            </pre>
+          </li>
+          <li>
+            <a class="code-link" href="https://rolling-scopes-school.github.io/alexandr-mikhailov-JS2020Q3/calculator/">a simple calculator on pure JS</a>
+          </li>
+        </ol>
       </section>
 
       <div>
         <h2>Experience</h2>
 
-        <p>For a last 14 years I worked in testing and development of electronic devices.</p>
+        <p>For a last 15 years I worked in testing and development of electronic devices.</p>
       </div>
       <div>
         <h2>Education</h2>
@@ -82,14 +118,13 @@ function solve(a,b){
       </div>
       <div>
         <h2>English</h2>
-        <p>My current level is A2. I read english technical documetation, watch english youtube channels.</p>
+        <p>I read english technical documetation, watch english youtube channels.</p>
       </div>
       <footer class='footer'>
         <a class="git-link" href="https://github.com/Alexandr-Mikhailov">My github</a>
-        <p class="year">2021</p>
-        <a class="rss" href="https://rs.school/js/"></a>
+        <p class="year">2022</p>
+        <a class="rss-link rss" href="https://rs.school/js/"></a>
       </footer>
     </main>
-    <script src="script.js"></script>
   </body>
 </html>
