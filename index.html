@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML, CSS & Git Basics</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <main class="wrapper">
+      <header>
+        <h1>Resume</h1>
+      </header>
+      <img class="photo" src="photo.jpg" alt="Photo">
+      <div class="main-info">
+        <p><strong>First name: </strong>Alexander</p>
+        <p><strong>Last Name: </strong>Mikhailov</p>
+        <p><strong>Age: </strong>36</p>
+      </div>
+
+      <div>
+        <h2> Contact info</h2>
+        <ul>
+          <li><strong>E-mail: </strong>mikhailov_as@mail.ru</li>
+        </ul>
+      </div>
+
+      <article>
+        <h2>Summary</h2>
+        <p>Programming is an interesting and exciting job,so I decided to change my profession.</p>
+      </article>
+
+      <article>
+        <h2>Skills</h2>
+        <p><strong>Programming languages</strong></p>
+        <ul>
+          <li>C#</li>
+          <li>JS</li>
+          <li>SQL</li>
+          <li>CSS</li>
+          <li>ASM for PIC microcontollers</li>
+        </ul>
+      </article>
+
+      <section>
+        <h2>Code examples</h2>
+        <ol>
+          <li>
+            <pre class="code">
+mathCalculator
+document.getElementById('calculateButton').onclick = function () {
+    var str = document.getElementById('input').value;
+    var isStrExpression = str.match(/^((\d?\.?\d?\s?\+?\-?\*?\/?)+={1})$/g);
+
+    if (isStrExpression == null || isStrExpression.length !=1) {
+        alert("cannot parse arithmetic expression")
+    }
+    else{
+        var expressionParse = str.match(/(\d+(\.*\d)*)|(\+|\-|\*|\/)/g);
+    var i, result = 0;
+
+    for (i = 0; i &lt; expressionParse.length; i++){
+        switch (expressionParse[i]){
+            case '+': {
+                result += parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            case '-': {
+                result -= parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            case '*': {
+                result *= parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            case '/': {
+                result /= parseFloat(expressionParse[i+1]);
+                i++;
+                break;
+            }
+            default : {
+                result = parseFloat(expressionParse[i]);
+                break;
+            }
+        }
+    }
+
+    alert(result.toFixed(2));
+    }
+}
+            </pre>
+          </li>
+          <li>
+            <a class="code-link" href="https://rolling-scopes-school.github.io/alexandr-mikhailov-JS2020Q3/calculator/">a simple calculator on pure JS</a>
+          </li>
+        </ol>
+      </section>
+
+      <div>
+        <h2>Experience</h2>
+
+        <p>For a last 15 years I worked in testing and development of electronic devices.</p>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <p><strong>Main:</strong></p>
+        <ul>
+          <li>Saratov State University, radio engineering and electrodynamics</li>
+        </ul>
+
+        <p><strong>Online:</strong></p>
+        <ul>
+          <li>EPAM BASICS .NET/WEB DEVELOPMENT in 2018</li>
+          <li>Codeacademy</li>
+        </ul>
+      </div>
+      <div>
+        <h2>English</h2>
+        <p>I read english technical documetation, watch english youtube channels.</p>
+      </div>
+      <footer class='footer'>
+        <a class="git-link" href="https://github.com/Alexandr-Mikhailov">My github</a>
+        <p class="year">2022</p>
+        <a class="rss-link rss" href="https://rs.school/js/"></a>
+      </footer>
+    </main>
+  </body>
+</html>
